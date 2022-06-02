@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Press+Start+2P&display=swap');
+
+/*Configurações gerais da página*/
+
+:root {
+    --main-color: #add8e6;
+    --black: #13131a;
+    --bg: #3A4042;
+    --border-bottom: 5px solid #000;
+}
+
+
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+body {
+    margin-top: 6rem;
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: 5rem;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/*Cabeçalho da página*/
+
+.header {
+    background: var(--bg);
+    display: flex;
+    padding: 1.5rem 7%;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: var(--border-bottom);
+    position: fixed;
+    top:0; left: 0; right: 0;
+    z-index: 1000;
+}
+
+.header .logo {
+    font-family: 'Press Start 2P', sans-serif;
+    margin-left: 1rem;
+    color: #add8e6;
+    text-shadow: 3px 3px 0px #000000;
+}
+
+.header .nav-bar a {
+    font-family: 'Fira Code', monospace;
+    margin: 0 1rem;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.header .nav-bar a:hover {
+    color: #add8e6;
+    text-decoration: none;
+    border-bottom: .1rem solid var(--bg);
+    padding-bottom: .5rem;
+}
+
+.header .icones div {
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.0rem;
+    margin-left: 2rem;
+}
+
+.header .icones div:hover {
+    color: var(--main-color);
+}
+
+#menu-btn {
+    display: none;
+}
+
+/*Seção principal*/
+
+#main-section {
+    padding-top: 4rem;
+    background: var(--main-color);
+    height: 34.2rem;
+    border-bottom: var(--border-bottom);
+}
+
+.titles {
+    font-family: 'Fira Code', monospace;
+    font-size: 10rem;
+    color: var(--bg);
+}
+
+.paragrafo {
+    font-family: 'Fira Code', monospace;
+    color: var(--bg);
+}
+
+.btn-collor {
+    background-color: var(--bg);
+    color:var(--main-color);
+}
+
+.btn-collor:hover {
+    background-color: #fff;
+    color: var(--bg);
+}
+
+.img-mine {
+    width: 100%;
+}
+
+/*Seção Skills*/
+
+#skills {
+    background: var(--bg);
+    padding-top: 2rem;
+    height: 34.2rem;
+    border-bottom: var(--border-bottom);
+}
+
+#skills h1 {
+    font-family: 'Fira Code', monospace;
+    text-align: center;
+    color: #fff;
+}
+
+.wrapper-skills {
+    margin-top: 6rem;
+    display: flex;
+    justify-content: center;
+}
+
+.skill-items {
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+}
+
+.skill-items img {
+    width: 6rem;
+    margin-right: 1rem;
+}
+
+.skill-items progress {
+    border: 0.1rem solid #000;
+    height: 2rem;
+    width: 20rem;
+    background-color: #fff;
+    color: var(--main-color);
+}
+
+.right-content {
+    float: right;
+}
+
+.right-content h2 {
+    font-family: 'Fira Code', monospace;
+    font-size: 1.5rem;
+    text-align: justify;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+@media (max-width:991px) {
+    
+    html {
+        font-size: 60%;
+    }
+
+    .header {
+        padding: 1.5rem 2rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+}
+
+@media (max-width:768px) {
+
+    html {
+        font-size: 60%;
+    }
+
+    #menu-btn {
+        display: inline-block;
+    }
+
+    .header {
+        border-bottom: 5px solid #000;
+    }
+
+    .header .nav-bar {
+        position: absolute;
+        margin-top: 0.60rem;
+        top:100%; right: -100%;
+        background: var(--bg);
+        width: 30rem;
+        height: 100vh;
+    }
+
+    .header .nav-bar.active {
+        right: 0;          
+    }
+
+    .header .nav-bar a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        margin: 1.5rem;
+        padding: .5rem;
+        font-size: 2rem;
+    }
+
+    .col-md-6 img {
+        display: none;
+    }
+
+    .skill-items img {
+    width: 4rem;
+    }
+
+    .skill-items progress {
+        border: 0.15rem solid #000;
+        width: auto;
+        height: auto;
+        background-color: #fff;
+        columns: var(--main-color);
+    }
+
+
+}
+
+@media (max-width:450px) {
+    html {
+        font-size: 50%;
+    }
+}
