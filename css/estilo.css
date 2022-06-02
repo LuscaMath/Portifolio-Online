@@ -278,9 +278,8 @@ a:hover {
 
     .skill-items progress {
         border: 0.15rem solid #000;
-        width: auto;
-        height: auto;
         background-color: #fff;
+        width: 15rem;
         columns: var(--main-color);
     }
 
