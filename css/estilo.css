@@ -279,7 +279,8 @@ a:hover {
     .skill-items progress {
         border: 0.15rem solid #000;
         background-color: #fff;
-        width: 15rem;
+        height: auto;
+        width: auto;
         columns: var(--main-color);
     }
 
@@ -289,5 +290,13 @@ a:hover {
 @media (max-width:450px) {
     html {
         font-size: 50%;
+    }
+
+    .skill-items progress {
+        border: 0.15rem solid #000;
+        background-color: #fff;
+        height: auto;
+        width: auto;
+        columns: var(--main-color);
     }
 }
