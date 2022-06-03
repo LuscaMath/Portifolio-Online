@@ -263,7 +263,7 @@ progress::-webkit-progress-value {
 
     #main-section {
         display: flex;
-        min-height: 50vh;
+        min-height: 60vh;
         font-size: 2rem;
         align-items: center;
     }
