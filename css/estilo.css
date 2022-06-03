@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Press+Start+2P&family=Roboto&display=swap');
 
 /*Configurações gerais da página*/
 
@@ -24,6 +24,7 @@ body {
 }
 
 html {
+    font-size: 62.5%;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
@@ -50,7 +51,7 @@ a:hover {
 .header {
     background: var(--bg);
     display: flex;
-    padding: 1.5rem 7%;
+    padding: 2rem 7%;
     align-items: center;
     justify-content: space-between;
     border-bottom: var(--border-bottom);
@@ -69,7 +70,7 @@ a:hover {
 .header .nav-bar a {
     font-family: 'Fira Code', monospace;
     margin: 0 1rem;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: #fff;
 }
 
@@ -98,29 +99,34 @@ a:hover {
 /*Seção principal*/
 
 #main-section {
-    padding-top: 4rem;
+    display: flex;
+    align-items: center;
     background: var(--main-color);
-    height: 34.2rem;
+    min-height: 100vh;
     border-bottom: var(--border-bottom);
 }
 
-.titles {
-    font-family: 'Fira Code', monospace;
-    font-size: 10rem;
+.titles h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 6rem;
     color: var(--bg);
 }
 
-.paragrafo {
-    font-family: 'Fira Code', monospace;
+.paragrafo p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
     color: var(--bg);
 }
 
-.btn-collor {
+.btn-principal {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
     background-color: var(--bg);
-    color:var(--main-color);
+    color: #fff;
+    padding: 2rem 5rem;
 }
 
-.btn-collor:hover {
+.btn-principal:hover {
     background-color: #fff;
     color: var(--bg);
 }
@@ -160,13 +166,29 @@ a:hover {
     margin-right: 1rem;
 }
 
-.skill-items progress {
+progress {
     border: 0.1rem solid #000;
     height: 2rem;
     width: 20rem;
     background-color: #fff;
     color: var(--main-color);
 }
+
+::-moz-progress-bar {
+    background-color: var(--main-color);
+  }
+
+progress::-webkit-progress-bar {
+    border: 0.1rem solid #000;
+    height: 2rem;
+    width: 20rem;
+    background-color: #fff;
+}
+
+progress::-webkit-progress-value {
+    background-color: var(--main-color);
+}
+
 
 .right-content {
     float: right;
@@ -200,42 +222,14 @@ a:hover {
 
 
 
+/* Midias
+-----------------*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* media queries */
-@media (max-width:991px) {
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
     
     html {
-        font-size: 60%;
-    }
-
-    .header {
-        padding: 1.5rem 2rem;
-    }
-
-    section {
-        padding: 2rem;
-    }
-}
-
-@media (max-width:768px) {
-
-    html {
-        font-size: 60%;
+        font-size: 35%;
     }
 
     #menu-btn {
@@ -268,6 +262,22 @@ a:hover {
         font-size: 2rem;
     }
 
+    #main-section {
+        display: flex;
+        min-height: 50vh;
+        font-size: 2rem;
+        align-items: center;
+    }
+
+    .titles h2 {
+        font-size: 6rem;
+    }
+
+    .paragrafo p {
+        font-size: 3rem;
+    }
+
+
     .col-md-6 img {
         display: none;
     }
@@ -276,27 +286,123 @@ a:hover {
     width: 4rem;
     }
 
-    .skill-items progress {
-        border: 0.15rem solid #000;
-        background-color: #fff;
-        height: auto;
-        width: auto;
-        columns: var(--main-color);
-    }
-
-
 }
 
-@media (max-width:450px) {
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) { 
+	
     html {
-        font-size: 50%;
+        font-size: 40%;
+    }
+
+    #menu-btn {
+        display: inline-block;
+    }
+
+    .header {
+        border-bottom: 5px solid #000;
+    }
+
+    .header .nav-bar {
+        position: absolute;
+        margin-top: 0.60rem;
+        top:100%; right: -100%;
+        background: var(--bg);
+        width: 30rem;
+        height: 100vh;
+    }
+
+    .header .nav-bar.active {
+        right: 0;          
+    }
+
+    .header .nav-bar a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        margin: 1.5rem;
+        padding: .5rem;
+        font-size: 2rem;
+    }
+
+    #main-section {
+        display: flex;
+        font-size: 2rem;
+        align-items: center;
+    }
+
+
+    .col-md-6 img {
+        display: none;
+    }
+
+    .skill-items img {
+        width: 4rem;
     }
 
     .skill-items progress {
         border: 0.15rem solid #000;
         background-color: #fff;
-        height: auto;
-        width: auto;
+        height: 2rem;
+        width: 20rem;
         columns: var(--main-color);
     }
+
 }
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    
+    html {
+        font-size: 40%;
+    }
+
+    .header {
+        padding: 1.5rem 2rem;
+    }
+
+    section {
+        padding: 2rem;
+    
+    }
+}   
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
