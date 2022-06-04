@@ -6,7 +6,7 @@
     --main-color: #add8e6;
     --black: #13131a;
     --bg: #3A4042;
-    --border-bottom: 5px solid #000;
+    --border-bottom: 2px solid #000;
 }
 
 
@@ -60,10 +60,10 @@ a:hover {
 }
 
 .header .logo {
-    font-family: 'Press Start 2P', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin-left: 1rem;
     color: #add8e6;
-    text-shadow: 3px 3px 0px #000000;
+    text-shadow: 2px 2px 0px #000000;
 }
 
 .header .nav-bar a {
@@ -364,17 +364,17 @@ progress::-webkit-progress-value {
 
     #main-section {
         display: flex;
-        min-height: 60vh;
+        min-height: 100vh;
         font-size: 2rem;
         align-items: center;
     }
 
     .titles h2 {
-        font-size: 5rem;
+        font-size: 7rem;
     }
 
     .paragrafo p {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
 
@@ -383,7 +383,7 @@ progress::-webkit-progress-value {
     }
 
     .btn-principal {
-        font-size: 2rem;
+        font-size: 2.5rem;
         padding: 1rem 3rem;
     }
 
