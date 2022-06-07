@@ -112,6 +112,7 @@ a:hover {
     align-items: center;
     background: var(--main-color);
     min-height: 100vh;
+    border-bottom: var(--border-bottom);
 }
 
 .titles h2 {
@@ -150,6 +151,7 @@ a:hover {
     background: var(--bg);
     padding-top: 2rem;
     height: 35rem;
+    border-bottom: var(--border-bottom);
 }
 
 #skills h1 {
@@ -215,28 +217,32 @@ progress::-webkit-progress-value {
     background-color: var(--main-color);
     padding-top: 2rem;
     height: 35rem;
+    border-bottom: var(--border-bottom);
 }
 
-#projects h1 {
+.wrapper-projects h1 {
     font-family: 'Poppins', sans-serif;
-    text-align: center;
     color: #000;
 }
 
-#projects p {
+.wrapper-projects p {
     font-family: 'Poppins', sans-serif;
     font-size: 1.5rem;
-    margin-top: 3rem;
     text-align: center;
     color: #000;
 }
 
 .wrapper-projects {
-    height: 20rem;
-    align-items: center;
+    height: 30rem;
     display: flex;
-    justify-content: space-around;
-    text-align: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.items-project {
+    display: flex;
+    gap: 4rem;
 }
 
 .projects-item {
@@ -244,15 +250,10 @@ progress::-webkit-progress-value {
     flex-direction: column;
     justify-content: center;
     width: 15rem;
-    height: 13rem;
+    height: 13rem;  
     align-items: center;
     border-radius: 2rem;
     border: solid 0.1rem #000;
-}
-
-.projects-item:hover {
-    width: 16rem;
-    height: 14rem;
 }
 
 .projects-item h4 {
@@ -272,6 +273,7 @@ progress::-webkit-progress-value {
     background-color: #fff;
     padding-top: 2rem;
     height: 35rem;
+    border-bottom: var(--border-bottom);
 }
 
 .wrapper-sobre {
@@ -280,11 +282,10 @@ progress::-webkit-progress-value {
     height: 30rem;
     justify-content: space-evenly;
     align-items: center;
-    flex-wrap: wrap;
 }
 
 .sobre-item {
-    font-size: 1.5rem;
+    font-size: 1.5rem;  
     width: 60%;
 }
 
@@ -310,8 +311,23 @@ progress::-webkit-progress-value {
     height: 26rem;
 }
 
+/*Rodapé*/
 
+#rodape {
+    background-color: var(--main-color);
+}
 
+.title-rodape {
+    font-family: 'Poppins', sans-serif;
+}
+
+.p-rodape {
+    font-family: 'Poppins', sans-serif;
+}
+
+.copy-p {
+    font-family: 'Poppins', sans-serif;
+}
 
 
 
@@ -465,7 +481,7 @@ progress::-webkit-progress-value {
     }
 
     .sobre-item p {
-        font-size: 1.2rem;
+        font-size: 1.22rem;
         text-align: justify;
     }
 
@@ -473,6 +489,22 @@ progress::-webkit-progress-value {
         width: 20rem;
         height: 20rem;
     }
+
+    .btn {
+        font-size: 2.2rem;
+    }
+
+    .title-rodape {
+        font-size: 3.5rem;
+    }
+
+    .p-rodape {
+        font-size: 2rem;
+    }
+
+    .copy-p {
+        font-size: 1.5rem;
+    } 
 
 }
 
